@@ -3,6 +3,7 @@
 PRIMARY = "blue"
 ACCENT = "#1c4587"
 EDUCATION_ACCENT = "#2f9e8f"
+EDUCATION_COLOR = "teal"  # Mantine palette name matching EDUCATION_ACCENT, for dmc components
 
 PDF_HREF = "/assets/Abdelrahman_Ali_CV.pdf"
 PDF_DOWNLOAD_NAME = "Abdelrahman_Ali_CV.pdf"
