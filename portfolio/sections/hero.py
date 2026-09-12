@@ -85,7 +85,7 @@ def render() -> dmc.Box:
             size="md",
             px="md",
             pt={"base": 56, "sm": 84},
-            pb={"base": 36, "sm": 48},
+            pb={"base": 10, "sm": 14},
             children=dmc.Stack(
                 [
                     dmc.Title(CV.name, order=1, fz={"base": 34, "sm": 46}, c=ACCENT),

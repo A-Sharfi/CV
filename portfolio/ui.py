@@ -14,18 +14,29 @@ def reveal(*children) -> html.Div:
     return html.Div(className="reveal", children=list(children))
 
 
-def section(section_id: str, title: str, *children) -> dmc.Container:
-    """A titled page section; every child is wrapped in a scroll-reveal."""
+def section(section_id: str, title: str, *children, before=None) -> dmc.Container:
+    """A titled page section; every child is wrapped in a scroll-reveal.
+
+    ``before`` renders above the title (still inside the section, so anchor
+    scrolling still lands at the top of it) — e.g. a chart that should read
+    before the heading rather than under it.
+    """
+    kids = []
+    if before is not None:
+        kids.append(reveal(before))
+    kids.append(reveal(dmc.Title(title, order=2, mb="lg", c=ACCENT)))
+    kids.extend(reveal(child) for child in children)
+    # A "before" element (e.g. a chart) sits right after the previous section's
+    # own bottom padding, so this section needs little extra top padding.
+    top_padding = {"base": 10, "sm": 14} if before is not None else {"base": 36, "sm": 48}
     return dmc.Container(
         id=section_id,
         className="scroll-target",
         size="md",
         px="md",
-        py={"base": 36, "sm": 48},
-        children=[
-            reveal(dmc.Title(title, order=2, mb="lg", c=ACCENT)),
-            *[reveal(child) for child in children],
-        ],
+        pt=top_padding,
+        pb={"base": 36, "sm": 48},
+        children=kids,
     )
 
 

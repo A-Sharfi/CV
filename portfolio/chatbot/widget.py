@@ -14,8 +14,8 @@ from portfolio.chatbot import qa
 from portfolio.config import PRIMARY
 
 _GREETING = (
-    "Hi — I'm a small canned bot. Ask about experience, skills, education, "
-    "languages or contact."
+    "Hi. Ask me about Abelrahman's experience, skills, education, "
+    "languages, VISA or contact."
 )
 _PANEL_STYLE = {"width": 340, "maxWidth": "90vw"}
 
