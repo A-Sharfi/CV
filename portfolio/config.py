@@ -8,6 +8,15 @@ EDUCATION_COLOR = "teal"  # Mantine palette name matching EDUCATION_ACCENT, for 
 PDF_HREF = "/assets/Abdelrahman_Ali_CV.pdf"
 PDF_DOWNLOAD_NAME = "Abdelrahman_Ali_CV.pdf"
 
+# Used for link-preview (Open Graph / Twitter Card) meta tags. Update SITE_URL
+# if the deployed domain changes.
+SITE_URL = "https://abdelrahman-ali-cv.onrender.com"
+SITE_DESCRIPTION = (
+    "Financial Applications Developer building financial software and moving "
+    "toward AI platform engineering. Python, Dash, ETL, machine learning."
+)
+OG_IMAGE_HREF = "/assets/og-image.png"
+
 # Applied to every glass card: translucent panel + hover lift (see assets/style.css).
 GLASS = "glass hover-card"
 
