@@ -26,6 +26,15 @@ QA: list[tuple[list[str], str]] = [
         "integrate financial data APIs like Bloomberg and Refinitiv.",
     ),
     (
+        ["day to day", "typical day", "your day to day", "average day", "day in the life",
+         "daily routine", "daily tasks", "normal day look like"],
+        "Depends on the day, but usually some mix of: building or refactoring features "
+        "for our internal apps, writing unit tests, running through UAT with whoever "
+        "owns the business side, and keeping the ETL jobs that pull in market data "
+        "actually working. I also write up docs so the next person (often "
+        "future me) isn't stuck guessing how something works.",
+    ),
+    (
         ["what languages", "programming languages", "which languages do you code", "tech stack", "what technologies"],
         "Main languages: Python, C, C++ and SQL, plus basic JavaScript and CSS. "
         "Day to day I use Python Dash, Pandas, SQLAlchemy, MS SQL Server, Jenkins, "
@@ -44,6 +53,17 @@ QA: list[tuple[list[str], str]] = [
         "Learning'. Professionally, I design and build ETL data pipelines and analytics. "
         "I would like to expand my scope to include ML and deep learning model building "
         "and their CI/CD pipelines.",
+    ),
+    (
+        ["next goal", "future goal", "next mission", "career goal", "future plans",
+         "what's next for you", "long term goal", "what are you working towards",
+         "next accomplishment", "biggest goal", "where do you see yourself"],
+        "Moving from applying ML in coursework and side projects to actually shipping "
+        "AI software for a living: deep learning and LLM-based systems, not just "
+        "dashboards and ETL. I'm already putting in the work outside my day job with "
+        "FastAPI, Docker, retrieval-augmented generation, and LLM agents, building on "
+        "the ML and NLP I studied in my M.Sc. and the inflation-forecasting thesis I "
+        "wrote. The goal is a role where that's the actual job, not the side project.",
     ),
     (
         ["experience", "work history", "previous jobs", "career", "past roles"],
@@ -149,5 +169,6 @@ SUGGESTIONS = [
     "What do you do?",
     "What's your tech stack?",
     "Tell me about your experience",
+    "What's next for you?",
     "How can I contact you?",
 ]
