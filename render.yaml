@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: abdelrahman-cv
+    name: abdelrahman-ali-cv
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
