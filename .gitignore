@@ -1,1 +1,9 @@
-.venv
+.venv/
+rendercv_output/
+__pycache__/
+*.pyc
+.DS_Store
+
+# personal study notes — not part of the project
+learning/
+project-brief.md

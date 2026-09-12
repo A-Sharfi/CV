@@ -1,0 +1,134 @@
+cv:
+  name: Abdelrahman Ali
+  location: Luxembourg
+  email: abdu96sharfi@gmail.com
+  social_networks:
+    - network: GitHub
+      username: A-Sharfi
+  sections:
+    profile_summary:
+      - A developer with over three years of experience building financial
+        applications, including ETL pipelines, dashboards, and market data
+        integrations. He is now moving towards AI platform and backend
+        engineering, building on an M.Sc. in Economics and Data Analysis
+        (Machine Learning incl. LLMs, NLP, Big Data Management with PostgreSQL)
+        and a thesis applying ML to EU inflation forecasting. With a B.Eng. in
+        Electrical Engineering as well, he combines full-stack development
+        experience with a proven ability to pick up new tools quickly.
+      - "**Residence status:** European Blue Card (carte bleue européenne)"
+    experience:
+      - company: European Stability Mechanism (ESM)
+        position: Financial Applications Developer
+        location: Luxembourg
+        start_date: 2024-05
+        end_date: present
+        highlights:
+          - Develop and deploy applications that address technical, business, and
+            security requirements.
+          - Develop unit tests and facilitate User Acceptance Testing (UAT).
+          - Refactor legacy code and integrate it with newly developed
+            applications.
+          - Build ETL processes for the scheduled update of market data.
+          - Write technical documentation and publish it in SharePoint and
+            Microsoft Azure.
+          - Use financial data APIs (Bloomberg, Refinitiv) to retrieve and process
+            market data.
+          - "Technologies: Python Dash, Pandas, SQLAlchemy, MS SQL Server, Jenkins,
+            Git, Selenium, unittest, SonarQube, Pylint, Bloomberg API, Refinitiv
+            API, SharePoint."
+      - company: European Stability Mechanism (ESM)
+        position: IT Officer
+        location: Luxembourg
+        start_date: 2023-05
+        end_date: 2024-05
+        highlights:
+          - Six-month traineeship during the final semester of my master's degree,
+            later extended to one year.
+          - Led a transformation project migrating market data and dashboards from
+            Tableau to Power BI.
+          - Translated client needs into technical solutions across teams.
+          - Developed Power Platform solutions for business process automation.
+          - "Technologies: Power BI, Power Platform, Power Automate, Git,
+            SharePoint, change management, quantitative data analysis."
+      - company: DAL Group
+        position: Project Manager & Business Analyst
+        location: Sudan
+        start_date: 2020-02
+        end_date: 2021-10
+        highlights:
+          - Offered a two-year contract after completing the Group's Graduate
+            Development Program.
+          - Delivered business intelligence and process optimisation projects.
+          - Managed agricultural projects end-to-end, from land preparation to
+            harvesting and distribution.
+          - Delivered a security system project under a tight budget and deadline.
+          - "Technologies: Project management, business analysis, Excel, MS Project,
+            dashboard development, data analysis."
+      - company: DAL Group
+        position: Graduate Development Program
+        location: Sudan
+        start_date: 2018-02
+        end_date: 2020-01
+        highlights:
+          - Two-year rotational program across Supply Chain, HR, Sales & Marketing,
+            and Business Development.
+          - Optimised business processes and analysed market data to build a
+            comprehensive customer database.
+          - Developed a three-year business model that led to the establishment of
+            a new department.
+    education:
+      - institution: University of Trier & University of Bergamo (Double Degree)
+        area: Economics and Data Analysis
+        degree: M.Sc.
+        location: Germany & Italy
+        start_date: 2021-10
+        end_date: 2023-07
+        highlights:
+          - "Core modules: Machine Learning (incl. LLMs), Python, Statistics, Data
+            Analysis, Microeconomics, R, Natural Language Processing, Big Data
+            Management (incl. PostgreSQL), Macroeconomics, International Energy
+            Markets, Political Economics, EU Law."
+          - "Thesis: Predicting Inflation in the European Union Using Machine
+            Learning."
+      - institution: Sudan University of Science and Technology
+        area: Electrical Engineering (Control)
+        degree: B.Eng. (Hons)
+        location: Sudan
+        start_date: 2012-09
+        end_date: 2017-09
+        highlights:
+          - "Core modules: Analog & Digital Electronics, Computer Applications,
+            Electrical Circuit Theory, Microprocessor Systems, Digital Signal
+            Processing, Digital & Fuzzy Control Systems, Digital Communications,
+            Probability & Applied Statistics, Engineering Economics, PLCs."
+          - "Graduation project: Building a CNC machine for PCB manufacturing."
+    skills:
+      - label: Languages
+        details: Python, C, C++, SQL; basic HTML, JavaScript and CSS.
+      - label: Tools & Practices
+        details: Azure DevOps, Git, Jenkins, SonarQube, Pylint, unit testing, Selenium.
+      - label: Data & APIs
+        details: Pandas, SQLAlchemy, REST API integration, ETL pipelines, MS SQL
+          Server, PostgreSQL (coursework), Bloomberg API, Refinitiv API.
+      - label: BI & Automation
+        details: Power BI, Power Automate, Tableau, custom automation tools.
+      - label: AI/ML foundation
+        details: Machine Learning and LLMs, NLP (M.Sc. coursework); applied ML
+          thesis on EU inflation forecasting.
+      - label: Currently building (AI platform direction)
+        details: FastAPI, Docker, retrieval-augmented generation (RAG), LLM-based
+          agents — self-directed, extending the coursework foundation above.
+      - label: Domain
+        details: Database management, data analysis & visualisation, change
+          management, application design & development, code review & quality.
+    languages:
+      - label: Arabic
+        details: Mother tongue.
+      - label: English
+        details: C1 (confirmed by IELTS Academic).
+      - label: French
+        details: A2 (ongoing at INL).
+      - label: German
+        details: A1.
+design:
+  theme: classic
