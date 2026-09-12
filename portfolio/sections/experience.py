@@ -5,7 +5,7 @@ from __future__ import annotations
 import dash_mantine_components as dmc
 from dash import dcc
 
-from portfolio.charts import experience_timeline
+from portfolio.charts import career_timeline
 from portfolio.config import PRIMARY
 from portfolio.data import CV, Entry
 from portfolio.ui import section
@@ -44,23 +44,19 @@ def _timeline_item(entry: Entry) -> dmc.TimelineItem:
 
 def render() -> dmc.Container:
     items = [_timeline_item(e) for e in CV.experience]
-    return section(
-        "experience",
-        "Experience",
-        dmc.Paper(
-            [
-                dcc.Graph(figure=experience_timeline(), config={"displayModeBar": False}),
-                dmc.Timeline(
-                    children=items,
-                    active=len(items),
-                    bulletSize=18,
-                    lineWidth=2,
-                    color=PRIMARY,
-                    mt="xl",
-                ),
-            ],
-            className="glass",
-            radius="lg",
-            p={"base": "md", "sm": "xl"},
-        ),
+    chart = dmc.Paper(
+        dcc.Graph(figure=career_timeline(), config={"displayModeBar": False}),
+        className="glass",
+        radius="lg",
+        p={"base": "md", "sm": "xl"},
+        mb="lg",
     )
+    timeline = dmc.Paper(
+        dmc.Timeline(
+            children=items, active=len(items), bulletSize=18, lineWidth=2, color=PRIMARY
+        ),
+        className="glass",
+        radius="lg",
+        p={"base": "md", "sm": "xl"},
+    )
+    return section("experience", "Experience", timeline, before=chart)
