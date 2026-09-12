@@ -11,13 +11,30 @@ from portfolio.data import CV
 
 _COLORS = {"Experience": ACCENT, "Education": EDUCATION_ACCENT}
 
+# Shorter y-axis labels so the chart doesn't need a huge left margin on narrow
+# (phone-width) screens. Hover text and the detail cards below still use the
+# full title.
+_SHORT_LABELS = {
+    "Financial Applications Developer": "Fin. Apps Developer",
+    "Project Manager & Business Analyst": "PM & Business Analyst",
+    "Graduate Development Program": "Graduate Program",
+    "M.Sc. Economics and Data Analysis": "M.Sc. Econ. & Data Analysis",
+    "B.Eng. (Hons) Electrical Engineering (Control)": "B.Eng. Electrical Eng.",
+}
+
+
+def _short_label(title: str, limit: int = 26) -> str:
+    if title in _SHORT_LABELS:
+        return _SHORT_LABELS[title]
+    return title if len(title) <= limit else title[: limit - 1].rstrip() + "…"
+
 
 def career_timeline() -> go.Figure:
     """Experience and education on one timeline, oldest at the bottom.
 
     Combining both series (rather than experience alone) fills out the years
-    before the first job and makes real overlaps visible — e.g. the M.Sc.
-    ending as the IT Officer traineeship begins.
+    before the first job and makes real overlaps visible: the M.Sc. ending
+    right as the IT Officer traineeship begins, for instance.
     """
     items = [(e, "Experience") for e in CV.experience] + [
         (e, "Education") for e in CV.education
@@ -47,7 +64,8 @@ def career_timeline() -> go.Figure:
     earliest = min(e.start for e, _ in items)
     fig.update_layout(
         height=110 + 46 * len(items),
-        margin=dict(l=150, r=20, t=40, b=30),
+        margin=dict(l=10, r=20, t=40, b=30),
+        autosize=True,
         plot_bgcolor="rgba(0,0,0,0)",
         paper_bgcolor="rgba(0,0,0,0)",
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
@@ -61,8 +79,9 @@ def career_timeline() -> go.Figure:
         yaxis=dict(
             tickmode="array",
             tickvals=list(range(len(items))),
-            ticktext=[e.title for e, _ in items],
+            ticktext=[_short_label(e.title) for e, _ in items],
             showgrid=False,
+            automargin=True,
             range=[-0.6, len(items) - 0.4],
         ),
         font=dict(family="Inter, system-ui, sans-serif", size=12),
